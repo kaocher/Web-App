@@ -1,4 +1,5 @@
 import 'package:first/const/app_colors.dart';
+import 'package:first/widgets/custom_outline_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -11,20 +12,7 @@ Widget homeHeader({VoidCallback? onpress}) {
         size: 60.h,
         color: AppColors.primaryColor,
       ),
-      OutlinedButton(
-        onPressed: onpress,
-        style: OutlinedButton.styleFrom(
-            side: const BorderSide(color: AppColors.primaryColor, width: 2),
-            shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(10)))),
-        child: Text(
-          "Record their answer",
-          style: TextStyle(
-              fontSize: 7.sp,
-              fontWeight: FontWeight.bold,
-              color: AppColors.primaryColor),
-        ),
-      ),
+      CustomOutlineButton(onPress: () {}, btnText: "Record their answer"),
     ],
   );
 }
@@ -67,9 +55,9 @@ Widget homeOutlineButton() {
         shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(12)))),
     child: Container(
-      padding: EdgeInsets.symmetric(vertical: 6, horizontal: 5).r,
+      padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 5).r,
       width: 110.w,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           // borderRadius: BorderRadius.circular(10).r
           ),
 

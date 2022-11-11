@@ -1,3 +1,4 @@
+import 'package:first/const/app_colors.dart';
 import 'package:first/ui/views/home/home_page.dart';
 import 'package:first/ui/views/splash/splash.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         builder: (context, child) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
+            theme: ThemeData(primaryColor: AppColors.primaryColor),
             home: SplashScreen(),
           );
         });
